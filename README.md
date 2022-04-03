@@ -12,6 +12,10 @@ _[Source](https://twitter.com/runasand/status/1510246476315865095?s=28&t=OuZRixt
 
 ---
 
+## Show Me!
+
+https://beautiful-space.fra1.cdn.digitaloceanspaces.com/pdf-keywords-extractor/example.mp4
+
 # How to use the PDF Keywords Extractor
 
 ## Via User-Interface (for technical and non-technical users)

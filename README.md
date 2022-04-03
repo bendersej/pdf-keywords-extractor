@@ -14,7 +14,7 @@ _[Source](https://twitter.com/runasand/status/1510246476315865095?s=28&t=OuZRixt
 
 ## Show Me!
 
-https://beautiful-space.fra1.cdn.digitaloceanspaces.com/pdf-keywords-extractor/example.mp4
+https://user-images.githubusercontent.com/10613140/161422053-14d1a21a-1018-47d2-aeed-79e702d0eff6.mp4
 
 # How to use the PDF Keywords Extractor
 

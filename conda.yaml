@@ -1,0 +1,15 @@
+channels:
+  # Define conda channels here.
+  - conda-forge
+
+dependencies:
+  # Define conda packages here.
+  # If available, always prefer the conda version of a package, installation will be faster and more efficient.
+  # https://anaconda.org/search
+  - python=3.7.5
+
+  - pip=20.1
+  - pip:
+    # Define pip packages here.
+    # https://pypi.org/
+    - rpaframework==12.0.3 # https://rpaframework.org/releasenotes.html

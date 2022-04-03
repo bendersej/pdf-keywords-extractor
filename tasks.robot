@@ -20,7 +20,7 @@ Extract Text
 
     FOR    ${file}    IN    @{files}
         ${text}=    Get Text From PDF    ${file}
-        ${matches}=    Get Regexp Matches    ${text[1]}    ${joinedKeywords}
+        ${matches}=    Get Regexp Matches    ${text[1]}    (?im)${joinedKeywords}
         ${deduplicatedMatches}=    Remove Duplicates    ${matches}
         ${joinedDeduplicatedMatches}=    Catenate    SEPARATOR=,    @{deduplicatedMatches}
         ${currentFile}=    Create Dictionary    file=${file}    keywords=${joinedDeduplicatedMatches}

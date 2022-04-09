@@ -39,6 +39,9 @@ Place yourself at the root of this folder and run the following command:
 rcc run
 ```
 
+## Known limitation 
+The extractor currently extracts the text of the first page **only** of each PDFs
+
 ## Contributing
 
 ### Via Pull Request

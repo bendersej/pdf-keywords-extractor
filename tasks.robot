@@ -17,14 +17,20 @@ Extract Text
 
     ${csvData}=    Create List
 
-
     FOR    ${file}    IN    @{files}
-        ${text}=    Get Text From PDF    ${file}
-        ${matches}=    Get Regexp Matches    ${text[1]}    (?im)${joinedKeywords}
-        ${deduplicatedMatches}=    Remove Duplicates    ${matches}
-        ${joinedDeduplicatedMatches}=    Catenate    SEPARATOR=,    @{deduplicatedMatches}
-        ${currentFile}=    Create Dictionary    file=${file}    keywords=${joinedDeduplicatedMatches}
-        Append To List    ${csv_data}    ${currentFile}
+        ${pages}=    Get Text From PDF    ${file}
+
+        FOR    ${pageNumber}    IN    @{pages}
+            ${matches}=    Get Regexp Matches    ${pages[${pageNumber}]}    (?im)${joinedKeywords}
+            ${deduplicatedMatches}=    Remove Duplicates    ${matches}
+            ${deduplicatedMatchesCount}=    Get Length    ${deduplicatedMatches}
+
+            Continue For Loop If    ${deduplicatedMatchesCount} == ${0}
+
+            ${joinedDeduplicatedMatches}=    Catenate    SEPARATOR=,    @{deduplicatedMatches}
+            ${currentFile}=    Create Dictionary    file=${file} - page ${pageNumber}    keywords=${joinedDeduplicatedMatches}
+            Append To List    ${csv_data}    ${currentFile}
+        END
 
     END
 

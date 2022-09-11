@@ -39,8 +39,11 @@ Place yourself at the root of this folder and run the following command:
 rcc run
 ```
 
-## Known limitation 
-The extractor currently extracts the text of the first page **only** of each PDFs
+## Known issues
+
+**Extracting the text from big PDFs files currently takes a significant amount of time.**
+
+For example, it takes roughly 1 min and 10s to extract keywords for [The Count of Monte Cristo](http://msdl.cs.mcgill.ca/people/tfeng/books/The%20Count%20of%20Monte%20Cristo.pdf).
 
 ## Contributing
 
